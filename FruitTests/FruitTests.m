@@ -1,5 +1,6 @@
 #import <XCTest/XCTest.h>
 #import "Product.h"
+#import "Checkout.h"
 
 @interface FruitTests : XCTestCase
 
@@ -19,6 +20,49 @@
     
     XCTAssert([product.name isEqualToString: @"Orange"], @"Name \(product.name) is not 'Orange'");
     XCTAssertEqual(product.value, 25, @"Value \(product.value) is not 25");
+}
+
+- (void)test_createAndAppendFruits {
+    Checkout *checkout = [[Checkout alloc] initWithProducts: @[]];
+    
+    for (NSUInteger i = 0; i<100; i++) {
+        Product *product = [self randomProduct];
+        [checkout addProduct: product];
+    }
+    
+    XCTAssert([checkout.products count] == 100, "Not correct number of products in checkout");
+}
+
+- (void)test_initWithFruits {
+    NSArray *products = [self hundredProducts];
+    Checkout *checkout = [[Checkout alloc] initWithProducts: products];
+
+    XCTAssert([checkout.products count] == 100, "Not correct number of products in checkout");
+}
+
+- (void)test_addListOfFruits {
+    NSArray *products = [self hundredProducts];
+    Checkout *checkout = [[Checkout alloc] initWithProducts: @[]];
+    [checkout addList: products];
+    
+    XCTAssert([checkout.products count] == 100, "Not correct number of products in checkout");
+}
+
+#pragma mark - Helper Methods
+
+- (NSArray *)hundredProducts {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSUInteger i = 0; i<100; i++) {
+        Product *product = [self randomProduct];
+        [array addObject: product];
+    }
+    
+    return [array copy];
+}
+
+- (Product *)randomProduct {
+    return arc4random_uniform(10) % 2 == 0 ? [Product apple] : [Product orange];
 }
 
 @end

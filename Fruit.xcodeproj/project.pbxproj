@@ -12,6 +12,8 @@
 		B8369250209725DE0065A888 /* Fruit.h in Headers */ = {isa = PBXBuildFile; fileRef = B8369242209725DD0065A888 /* Fruit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B836925B209727210065A888 /* Product.h in Headers */ = {isa = PBXBuildFile; fileRef = B8369259209727210065A888 /* Product.h */; };
 		B836925C209727210065A888 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = B836925A209727210065A888 /* Product.m */; };
+		B836925F2097287C0065A888 /* Checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = B836925D2097287C0065A888 /* Checkout.h */; };
+		B83692602097287C0065A888 /* Checkout.m in Sources */ = {isa = PBXBuildFile; fileRef = B836925E2097287C0065A888 /* Checkout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		B836924F209725DE0065A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8369259209727210065A888 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		B836925A209727210065A888 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		B836925D2097287C0065A888 /* Checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checkout.h; sourceTree = "<group>"; };
+		B836925E2097287C0065A888 /* Checkout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Checkout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				B8369243209725DD0065A888 /* Info.plist */,
 				B8369259209727210065A888 /* Product.h */,
 				B836925A209727210065A888 /* Product.m */,
+				B836925D2097287C0065A888 /* Checkout.h */,
+				B836925E2097287C0065A888 /* Checkout.m */,
 			);
 			path = Fruit;
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B836925F2097287C0065A888 /* Checkout.h in Headers */,
 				B836925B209727210065A888 /* Product.h in Headers */,
 				B8369250209725DE0065A888 /* Fruit.h in Headers */,
 			);
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B836925C209727210065A888 /* Product.m in Sources */,
+				B83692602097287C0065A888 /* Checkout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
