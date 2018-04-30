@@ -24,4 +24,22 @@
     [self.products addObject: product];
 }
 
+- (NSUInteger) total
+{
+    return [self totalFromArray: self.products];
+}
+
+#pragma mark - Helper Functions
+
+- (NSUInteger) totalFromArray: (NSArray *)array
+{
+    NSUInteger total = 0;
+    
+    for (Product *product in array) {
+        total += product.value;
+    }
+    
+    return total;
+}
+
 @end

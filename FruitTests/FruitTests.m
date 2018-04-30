@@ -48,6 +48,21 @@
     XCTAssert([checkout.products count] == 100, "Not correct number of products in checkout");
 }
 
+- (void)test_totalForFruits {
+    Checkout *checkout = [[Checkout alloc] initWithProducts: @[]];
+    NSUInteger expected = 0;
+    
+    for (NSUInteger i = 0; i<100; i++) {
+        Product *product = [self randomProduct];
+        expected += product.value;
+        [checkout addProduct: product];
+    }
+    
+    NSUInteger total = [checkout total];
+    
+    XCTAssert(total == expected, "Total \(total), does not match expected: \(expected)");
+}
+
 #pragma mark - Helper Methods
 
 - (NSArray *)hundredProducts {

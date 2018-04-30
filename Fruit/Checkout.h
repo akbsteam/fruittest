@@ -10,5 +10,6 @@
 
 - (void) addList: (NSArray *)list;
 - (void) addProduct: (Product *)product;
+- (NSUInteger) total;
 
 @end
