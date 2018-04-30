@@ -88,6 +88,24 @@
     XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
 }
 
+- (void)test_productsAndOffers {
+    NSArray *list = @[[Product apple], [Product apple], [Product apple], [Product orange], [Product orange]];
+    NSUInteger expectedTotal = ([Product apple].value * 2) + ([Product orange].value * 2);
+    Checkout *checkout = [[Checkout alloc] initWithProducts: list];
+    
+    NSUInteger total = [checkout totalIncludingOffers];
+    XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
+}
+
+- (void)test_productsAndOffersTwo {
+    NSArray *list = @[[Product apple], [Product apple], [Product apple], [Product apple], [Product orange], [Product orange], [Product orange]];
+    NSUInteger expectedTotal = ([Product apple].value * 2) + ([Product orange].value * 2);
+    Checkout *checkout = [[Checkout alloc] initWithProducts: list];
+    
+    NSUInteger total = [checkout totalIncludingOffers];
+    XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
+}
+
 #pragma mark - Helper Methods
 
 - (NSArray *)hundredProducts {

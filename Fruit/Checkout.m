@@ -29,6 +29,11 @@
     return [self totalFromArray: self.products];
 }
 
+- (NSUInteger) totalIncludingOffers
+{
+    return 0;
+}
+
 #pragma mark - Helper Functions
 
 - (NSUInteger) totalFromArray: (NSArray *)array
