@@ -10,6 +10,8 @@
 		B8369249209725DE0065A888 /* Fruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B836923F209725DD0065A888 /* Fruit.framework */; };
 		B836924E209725DE0065A888 /* FruitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B836924D209725DE0065A888 /* FruitTests.m */; };
 		B8369250209725DE0065A888 /* Fruit.h in Headers */ = {isa = PBXBuildFile; fileRef = B8369242209725DD0065A888 /* Fruit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B836925B209727210065A888 /* Product.h in Headers */ = {isa = PBXBuildFile; fileRef = B8369259209727210065A888 /* Product.h */; };
+		B836925C209727210065A888 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = B836925A209727210065A888 /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B8369248209725DE0065A888 /* FruitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B836924D209725DE0065A888 /* FruitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitTests.m; sourceTree = "<group>"; };
 		B836924F209725DE0065A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8369259209727210065A888 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		B836925A209727210065A888 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				B8369242209725DD0065A888 /* Fruit.h */,
 				B8369243209725DD0065A888 /* Info.plist */,
+				B8369259209727210065A888 /* Product.h */,
+				B836925A209727210065A888 /* Product.m */,
 			);
 			path = Fruit;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B836925B209727210065A888 /* Product.h in Headers */,
 				B8369250209725DE0065A888 /* Fruit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B836925C209727210065A888 /* Product.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

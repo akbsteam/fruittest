@@ -1,12 +1,5 @@
-//
-//  FruitTests.m
-//  FruitTests
-//
-//  Created by Andy Bennett on 30/04/2018.
-//  Copyright © 2018 Andy Bennett. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
+#import "Product.h"
 
 @interface FruitTests : XCTestCase
 
@@ -14,26 +7,18 @@
 
 @implementation FruitTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)test_testApple {
+    Product *product = [Product apple];
+    
+    XCTAssert([product.name isEqualToString: @"Apple"], @"Name \(product.name) is not 'Apple'");
+    XCTAssertEqual(product.value, 60, @"Value \(product.value) is not 60");
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)test_testOrange {
+    Product *product = [Product orange];
+    
+    XCTAssert([product.name isEqualToString: @"Orange"], @"Name \(product.name) is not 'Orange'");
+    XCTAssertEqual(product.value, 25, @"Value \(product.value) is not 25");
 }
 
 @end
