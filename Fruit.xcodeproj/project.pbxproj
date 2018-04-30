@@ -14,6 +14,8 @@
 		B836925C209727210065A888 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = B836925A209727210065A888 /* Product.m */; };
 		B836925F2097287C0065A888 /* Checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = B836925D2097287C0065A888 /* Checkout.h */; };
 		B83692602097287C0065A888 /* Checkout.m in Sources */ = {isa = PBXBuildFile; fileRef = B836925E2097287C0065A888 /* Checkout.m */; };
+		B836926320972D740065A888 /* Offer.h in Headers */ = {isa = PBXBuildFile; fileRef = B836926120972D740065A888 /* Offer.h */; };
+		B836926420972D740065A888 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = B836926220972D740065A888 /* Offer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		B836925A209727210065A888 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		B836925D2097287C0065A888 /* Checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checkout.h; sourceTree = "<group>"; };
 		B836925E2097287C0065A888 /* Checkout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Checkout.m; sourceTree = "<group>"; };
+		B836926120972D740065A888 /* Offer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		B836926220972D740065A888 /* Offer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				B836925A209727210065A888 /* Product.m */,
 				B836925D2097287C0065A888 /* Checkout.h */,
 				B836925E2097287C0065A888 /* Checkout.m */,
+				B836926120972D740065A888 /* Offer.h */,
+				B836926220972D740065A888 /* Offer.m */,
 			);
 			path = Fruit;
 			sourceTree = "<group>";
@@ -108,6 +114,7 @@
 				B836925F2097287C0065A888 /* Checkout.h in Headers */,
 				B836925B209727210065A888 /* Product.h in Headers */,
 				B8369250209725DE0065A888 /* Fruit.h in Headers */,
+				B836926320972D740065A888 /* Offer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B836926420972D740065A888 /* Offer.m in Sources */,
 				B836925C209727210065A888 /* Product.m in Sources */,
 				B83692602097287C0065A888 /* Checkout.m in Sources */,
 			);

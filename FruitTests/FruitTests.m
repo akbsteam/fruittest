@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 #import "Product.h"
 #import "Checkout.h"
+#import "Offer.h"
 
 @interface FruitTests : XCTestCase
 
@@ -61,6 +62,30 @@
     NSUInteger total = [checkout total];
     
     XCTAssert(total == expected, "Total \(total), does not match expected: \(expected)");
+}
+
+- (void)test_bogof {
+    NSArray *list = @[[Product apple], [Product apple], [Product apple]];
+    NSUInteger expectedTotal = [Product apple].value * 2;
+    
+    NSUInteger total = [Offer bogof](list);
+    XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
+}
+
+- (void)test_threeForTwo_twoOranges {
+    NSArray *list = @[[Product orange], [Product orange]];
+    NSUInteger expectedTotal = [Product orange].value * 2;
+    
+    NSUInteger total = [Offer threeForTwo](list);
+    XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
+}
+
+- (void)test_threeForTwo_threeOranges {
+    NSArray *list = @[[Product orange], [Product orange]];
+    NSUInteger expectedTotal = [Product orange].value * 2;
+    
+    NSUInteger total = [Offer threeForTwo](list);
+    XCTAssertEqual(total, expectedTotal, "Total \(total), does not match expected: \(expectedTotal)");
 }
 
 #pragma mark - Helper Methods
