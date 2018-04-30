@@ -5,6 +5,7 @@
 @interface Checkout : NSObject
 
 @property (strong) NSMutableArray *products;
+@property (strong) NSDictionary *offers;
 
 - (instancetype)initWithProducts: (NSArray *)products;
 
